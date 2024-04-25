@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1714010396 source:e:\carpetas\c++\demo\main.cpp
+	<iostream>
+	<string.h>
+	<Menu.h>
+	<MenuItem.h>
+	<Exit.h>
+
+1712958016 e:\carpetas\c++\demo\include\menu.h
+	<iostream>
+	<string.h>
+	<MenuItem.h>
+
+1712958349 source:e:\carpetas\c++\demo\src\menu.cpp
+	"Menu.h"
+
+1714010654 e:\carpetas\c++\demo\include\menuitem.h
+	<iostream>
+	<string.h>
+
+1712958220 source:e:\carpetas\c++\demo\src\menuitem.cpp
+	"MenuItem.h"
+
+1714010347 source:e:\carpetas\c++\demo\src\exit.cpp
+	"Exit.h"
+	"MenuItem.h"
+
+1714010347 e:\carpetas\c++\demo\include\exit.h
+	<MenuItem.h>
+
