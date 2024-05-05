@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="include/Files" />
+					<Add directory="include/Items" />
+					<Add directory="include/model" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +27,9 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/Files" />
+					<Add directory="include/Items" />
+					<Add directory="include/model" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,11 +40,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Files/Usuarios.h" />
+		<Unit filename="include/Files/Ventas.h" />
+		<Unit filename="include/Items/Exit.h" />
+		<Unit filename="include/Items/Sales.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/MenuItem.h" />
+		<Unit filename="include/model/SaleModel.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Files/Usuarios.cpp" />
+		<Unit filename="src/Files/Ventas.cpp" />
+		<Unit filename="src/Items/Exit.cpp" />
+		<Unit filename="src/Items/Sales.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/MenuItem.cpp" />
+		<Unit filename="src/model/SaleModel.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

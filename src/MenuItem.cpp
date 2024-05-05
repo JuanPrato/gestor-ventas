@@ -6,12 +6,8 @@ MenuItem::MenuItem(int code, string title, string decorator) {
     _decorator = decorator;
 }
 
-MenuItem::~MenuItem() {
-    //dtor
-}
-
 string MenuItem::getTitleToShow() {
-    return to_string(_code) + ": " + _title.append(_decorator);
+    return to_string(_code) + ": " + _title + _decorator;
 }
 
 void MenuItem::setDecorator(string decorator) {
@@ -20,4 +16,10 @@ void MenuItem::setDecorator(string decorator) {
 
 int MenuItem::getCode() {
     return _code;
+}
+
+void MenuItem::execute() {
+    system("pause");
+    exit(2);
+    return;
 }

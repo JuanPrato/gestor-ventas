@@ -9,10 +9,10 @@ using namespace std;
 class MenuItem {
     public:
         MenuItem(int code, string title, string decorator = "");
-        virtual ~MenuItem();
         string getTitleToShow();
         void setDecorator(string decorator);
         int getCode();
+        virtual void execute();
 
     protected:
 
