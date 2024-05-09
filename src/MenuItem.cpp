@@ -18,8 +18,7 @@ int MenuItem::getCode() {
     return _code;
 }
 
-void MenuItem::execute() {
-    system("pause");
+void MenuItem::execute(User* user) {
     exit(2);
     return;
 }

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string.h>
 
+#include <User.h>
+
 using namespace std;
 
 class MenuItem {
@@ -12,7 +14,7 @@ class MenuItem {
         string getTitleToShow();
         void setDecorator(string decorator);
         int getCode();
-        virtual void execute();
+        virtual void execute(User* user = NULL);
 
     protected:
 

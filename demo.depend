@@ -1,24 +1,28 @@
 # depslib dependency file v1.0
-1714781749 source:e:\carpetas\c++\demo\main.cpp
+1715226567 source:e:\carpetas\c++\demo\main.cpp
 	<iostream>
 	<string.h>
+	<AuthManager.h>
 	<Menu.h>
 	<MenuItem.h>
+	<LoginItem.h>
 	<Sales.h>
 	<Exit.h>
 
-1714780598 e:\carpetas\c++\demo\include\menu.h
+1715217398 e:\carpetas\c++\demo\include\menu.h
 	<MenuItem.h>
+	<User.h>
 
-1714781912 source:e:\carpetas\c++\demo\src\menu.cpp
+1715217791 source:e:\carpetas\c++\demo\src\menu.cpp
 	"Menu.h"
 	<Exit.h>
 
-1714780131 e:\carpetas\c++\demo\include\menuitem.h
+1715217473 e:\carpetas\c++\demo\include\menuitem.h
 	<iostream>
 	<string.h>
+	<User.h>
 
-1714779227 source:e:\carpetas\c++\demo\src\menuitem.cpp
+1715217515 source:e:\carpetas\c++\demo\src\menuitem.cpp
 	"MenuItem.h"
 
 1714780044 source:e:\carpetas\c++\demo\src\exit.cpp
@@ -28,26 +32,28 @@
 1714780131 e:\carpetas\c++\demo\include\exit.h
 	<MenuItem.h>
 
-1714773346 source:e:\carpetas\c++\demo\src\files\usuarios.cpp
+1715226121 source:e:\carpetas\c++\demo\src\files\usuarios.cpp
+	<iostream>
 	"Usuarios.h"
 
-1714773342 e:\carpetas\c++\demo\include\files\usuarios.h
+1715218542 e:\carpetas\c++\demo\include\files\usuarios.h
 	<iostream>
 	<string.h>
+	<User.h>
 
-1714780740 source:e:\carpetas\c++\demo\src\items\exit.cpp
+1715217629 source:e:\carpetas\c++\demo\src\items\exit.cpp
 	"Exit.h"
 	"MenuItem.h"
 
-1714780131 e:\carpetas\c++\demo\include\items\exit.h
+1715217611 e:\carpetas\c++\demo\include\items\exit.h
 	<MenuItem.h>
 
-1714783662 source:e:\carpetas\c++\demo\src\items\sales.cpp
+1715226487 source:e:\carpetas\c++\demo\src\items\sales.cpp
 	"Sales.h"
 	<Menu.h>
 	<Ventas.h>
 
-1714781581 e:\carpetas\c++\demo\include\items\sales.h
+1715226478 e:\carpetas\c++\demo\include\items\sales.h
 	<MenuItem.h>
 
 1714783147 source:e:\carpetas\c++\demo\src\model\salemodel.cpp
@@ -56,10 +62,43 @@
 1714782914 e:\carpetas\c++\demo\include\model\salemodel.h
 	<string>
 
-1714783662 source:e:\carpetas\c++\demo\src\files\ventas.cpp
+1715225389 source:e:\carpetas\c++\demo\src\files\ventas.cpp
 	<iostream>
 	"Ventas.h"
 
 1714783420 e:\carpetas\c++\demo\include\files\ventas.h
 	<SaleModel.h>
+
+1715225977 source:e:\carpetas\c++\demo\src\model\user.cpp
+	"User.h"
+
+1715225059 e:\carpetas\c++\demo\include\model\user.h
+	<string>
+
+1715217790 e:\carpetas\c++\demo\include\items\loginitem.h
+	<MenuItem.h>
+
+1715226437 source:e:\carpetas\c++\demo\src\items\loginitem.cpp
+	"LoginItem.h"
+	"Usuarios.h"
+
+1715225530 source:e:\carpetas\c++\demo\src\items\registeritem.cpp
+	"RegisterItem.h"
+	"Usuarios.h"
+	"Ventas.h"
+
+1715224284 e:\carpetas\c++\demo\include\items\registeritem.h
+	<string.h>
+	<User.h>
+	<MenuItem.h>
+
+1715226257 source:e:\carpetas\c++\demo\src\authmanager.cpp
+	"AuthManager.h"
+	<Menu.h>
+	<LoginItem.h>
+	<RegisterItem.h>
+	<Exit.h>
+
+1715217273 e:\carpetas\c++\demo\include\authmanager.h
+	<User.h>
 

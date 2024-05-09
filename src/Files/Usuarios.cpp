@@ -1,37 +1,51 @@
+#include <iostream>
 #include "Usuarios.h"
 
-const char* FILE_NAME = "usuarios.ntp";
+const char* USER_FILE_NAME = "usuariosR.ntp";
 
 
-SaleModel* getSale() {
+User* login(string email, string password) {
 
-    FILE *p = fopen(FILE_NAME, "rb");
+    FILE *p = fopen(USER_FILE_NAME, "rb");
 
     if (p == NULL){
         cout << "No se pudo abrir el archivo.";
         return NULL;
     }
 
-    SaleModel sale;
+    User* user = new User;
+    int readCount = fread(user, sizeof(User), 1, p);
 
-    fread(&sale, sizeof(SaleModel), 1, p);
+    while (readCount != 0 && user->getEmail() != email) {
+        readCount = fread(user, sizeof(User), 1, p);
+    }
 
     fclose(p);
 
-    return &sale;
+    if (readCount == 0 || user->getPassword() != password) {
+        user = new User;
+        cout << user->getEmail();
+        return user;
+    }
+
+    return user;
 }
 
-void saveSale(SaleModel sale) {
-
-    FILE *p = fopen(FILE_NAME, "wb");
+void registerAccount(string username, string password, int role) {
+    FILE *p = fopen(USER_FILE_NAME, "wb");
 
     if (p == NULL){
         cout << "No se pudo abrir el archivo.";
         return;
     }
 
-    fwrite(&sale, sizeof(SaleModel), sizeof(SaleModel), p);
+    User* user = new User;
+    user->setEmail(username);
+    user->setPassword(password);
+    user->setRole(role);
 
+    fwrite(user, sizeof(User), 1, p);
     fclose(p);
 
+    delete user;
 }

@@ -2,6 +2,7 @@
 #define MENU_H
 
 #include <MenuItem.h>
+#include <User.h>
 
 using namespace std;
 
@@ -14,8 +15,10 @@ class Menu
         int waitForOption();
         bool checkIfOptionIsValid(int option);
         void executeOption(int option);
-        void createMenuLoop();
+        void createMenuLoop(bool oneTime = false);
         void addMenuItem(MenuItem* menuItem);
+        void setHeader(string header);
+        void setUser(User* user);
 
     protected:
 
@@ -23,6 +26,8 @@ class Menu
         MenuItem **_options;
         int _optionsQuantity;
         int _currentOptions = 0;
+        string _header;
+        User* _user;
 };
 
 #endif // MENU_H

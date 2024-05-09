@@ -7,7 +7,7 @@ class Sales: public MenuItem {
     public:
         Sales();
         virtual ~Sales();
-        virtual void execute();
+        virtual void execute(User* user);
 
     protected:
 

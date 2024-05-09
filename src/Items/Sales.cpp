@@ -11,7 +11,7 @@ Sales::~Sales()
     //dtor
 }
 
-void Sales::execute() {
+void Sales::execute(User* user) {
     Menu menu(10);
     menu.addMenuItem(new MenuItem(1, "Crear una nueva venta"));
     menu.addMenuItem(new MenuItem(2, "Ver ventas"));

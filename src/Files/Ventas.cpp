@@ -19,6 +19,8 @@ SaleModel* getSale() {
 
     fclose(p);
 
+    cout << sale.getProduct() << endl;
+
     return &sale;
 }
 
@@ -31,7 +33,7 @@ void saveSale(SaleModel sale) {
         return;
     }
 
-    fwrite(&sale, sizeof(SaleModel), sizeof(SaleModel), p);
+    fwrite(&sale, sizeof(SaleModel), 1, p);
 
     fclose(p);
 
