@@ -18,7 +18,7 @@ int MenuItem::getCode() {
     return _code;
 }
 
-void MenuItem::execute(User* user) {
-    exit(2);
-    return;
+int MenuItem::execute(User &user) {
+    cout << "Not implemented";
+    return 0;
 }

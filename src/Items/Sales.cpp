@@ -1,6 +1,5 @@
 #include "Sales.h"
-#include <Menu.h>
-#include <Ventas.h>
+#include "Exit.h"
 
 Sales::Sales(): MenuItem(1, "Ventas") {
     //ctor
@@ -11,14 +10,19 @@ Sales::~Sales()
     //dtor
 }
 
-void Sales::execute(User* user) {
+int Sales::execute(User &user) {
+    SalesManager::saveSale(Sale());
+
     Menu menu(10);
+    menu.setHeader("Opciones de ventas:");
+
     menu.addMenuItem(new MenuItem(1, "Crear una nueva venta"));
     menu.addMenuItem(new MenuItem(2, "Ver ventas"));
-    menu.addMenuItem(new MenuItem(3, "Volver"));
+    menu.addMenuItem(new Exit());
 
-    //menu.createMenuLoop();
+    menu.createMenuLoop();
 
-    saveSale(SaleModel());
-    getSale();
+    system("cls");
+
+    return 0;
 }

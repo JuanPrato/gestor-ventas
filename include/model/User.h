@@ -5,23 +5,25 @@
 
 using namespace std;
 
-class User
-{
+class User {
+    private:
+        char _username[50];
+        char _email[50];
+        char _password[50];
+        int _role;
+
     public:
         User();
-        //User(string email, string password, int role);
+        User(string username, string email, string password, int role);
         string getEmail();
         string getPassword();
-        void setEmail(string email);
-        void setPassword(string password);
-        void setRole(int role);
+        string getUsername();
+        //void setEmail(string email);
+        //void setUsername(string username);
+        //void setPassword(string password);
+        //void setRole(int role);
 
     protected:
-
-    private:
-        string _email;
-        string _password;
-        int _role;
 };
 
 #endif // USER_H

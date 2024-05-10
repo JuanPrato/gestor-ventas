@@ -7,7 +7,7 @@ class LoginItem: public MenuItem {
     public:
         LoginItem();
         virtual ~LoginItem();
-        void execute(User* user);
+        int execute(User &user);
 
     protected:
 

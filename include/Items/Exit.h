@@ -6,7 +6,7 @@
 class Exit : public MenuItem {
     public:
         Exit();
-        virtual void execute(User* user = NULL);
+        virtual int execute(User &user);
 
     protected:
 

@@ -20,9 +20,8 @@ int main() {
     User* user = authManager.askForLogin();
 
     system("cls");
-    cout << "HOLA";
-    system("pause");
-    const string header = "Gestor de ventas: 0.0.1\nBienvenido " + user->getEmail() + ": Por favor elige una opcion para continuar\n=======================";
+
+    const string header = "Gestor de ventas: 0.0.1\nBienvenido " + user->getUsername() + ": Por favor elige una opcion para continuar\n=======================";
 
     Menu menu(10);
     menu.setUser(user);

@@ -22,12 +22,7 @@ void Menu::setUser(User* user) {
 }
 
 void Menu::printMenu() {
-    /*
-    cout << "Gestor de ventas: 0.0.1" << endl;
-    cout << "Bienvenido {Nombre}: Por favor elige una opcion para continuar" << endl;
-    cout << "=======================" << endl;
-    */
-    cout << _header << endl;
+    printHeader();
     for (int i = 0; i < _currentOptions; i++) {
         cout << _options[i]->getTitleToShow() << endl;
     }
@@ -60,13 +55,13 @@ bool Menu::checkIfOptionIsValid(int option) {
     return isValid;
 }
 
-void Menu::executeOption(int option) {
+int Menu::executeOption(int option) {
     for (int i=0; i < _currentOptions; i++) {
         if (_options[i]->getCode() == option) {
             system("cls");
+            printHeader();
             MenuItem* po = _options[i];
-            po->execute(_user);
-            return;
+            return po->execute(*_user);
         }
     }
 }
@@ -74,11 +69,17 @@ void Menu::executeOption(int option) {
 void Menu::createMenuLoop(bool oneTime) {
     this->printMenu();
     int option = this->waitForOption();
-    this->executeOption(option);
+    int shouldContinue = this->executeOption(option);
 
-    while(!oneTime && true) {
+    while(!oneTime && shouldContinue == 0) {
         this->printMenu();
         int option = this->waitForOption();
-        this->executeOption(option);
+        shouldContinue = this->executeOption(option);
+    }
+}
+
+void Menu::printHeader() {
+    if (!_header.empty()) {
+        cout << _header << endl;
     }
 }

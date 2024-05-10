@@ -12,7 +12,7 @@ AuthManager::AuthManager()
 }
 
 User* AuthManager::askForLogin() {
-    const string authHeader = "Gestor de ventas: 0.0.1\nPor favor ingrese para continuar\n";
+    const string authHeader = "Gestor de ventas: 0.0.1\nPor favor ingrese para continuar\n=====================";
 
     User* user = new User;
 
@@ -24,7 +24,7 @@ User* AuthManager::askForLogin() {
     menu.addMenuItem(new RegisterItem());
     menu.addMenuItem(new Exit());
 
-    while (user->getEmail() == "") {
+    while (string("").compare(user->getEmail()) == 0) {
         system("cls");
         menu.createMenuLoop(true);
     }

@@ -11,7 +11,7 @@ class RegisterItem : public MenuItem
     public:
         RegisterItem();
         virtual ~RegisterItem();
-        void execute(User* user);
+        int execute(User &user);
 
     protected:
 

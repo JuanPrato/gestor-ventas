@@ -4,7 +4,7 @@
 Exit::Exit(): MenuItem(0, "Salir") {
 }
 
-void Exit::execute(User* user) {
-    exit(0);
-    return;
+int Exit::execute(User &user) {
+    //cout << "Gracias por usar nuestro programa c:" << endl;
+    return 1;
 }

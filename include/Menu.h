@@ -14,7 +14,6 @@ class Menu
         void printMenu();
         int waitForOption();
         bool checkIfOptionIsValid(int option);
-        void executeOption(int option);
         void createMenuLoop(bool oneTime = false);
         void addMenuItem(MenuItem* menuItem);
         void setHeader(string header);
@@ -28,6 +27,8 @@ class Menu
         int _currentOptions = 0;
         string _header;
         User* _user;
+        int executeOption(int option);
+        void printHeader();
 };
 
 #endif // MENU_H

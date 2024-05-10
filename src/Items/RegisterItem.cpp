@@ -1,6 +1,5 @@
 #include "RegisterItem.h"
-#include "Usuarios.h"
-#include "Ventas.h"
+#include "UsersManager.h"
 
 RegisterItem::RegisterItem(): MenuItem(2, "Registrarse") {
     //ctor
@@ -10,20 +9,29 @@ RegisterItem::~RegisterItem() {
     //dtor
 }
 
-void RegisterItem::execute(User* user) {
+int RegisterItem::execute(User &user) {
+    string username;
     string email;
     string password;
     int role;
 
-    cout << "Ingresar su email" << endl;
-    cin >> email;
+    fflush(stdin);
 
-    cout << "Ingresar su password" << endl;
+    cout << "Ingresar su nombre de usuario:" << endl;
+    getline(cin, username);
+
+    cout << "Ingresar su email:" << endl;
+    getline(cin, email);
+
+    cout << "Ingresar su password:" << endl;
     cin >> password;
 
-    cout << "Ingresar su rol" << endl;
+    cout << "Ingresar su rol:" << endl;
     cin >> role;
 
-    registerAccount(email, password, role);
+    User newUser(username, email, password, role);
 
+    UsersManager::registerAccount(newUser);
+
+    return 0;
 }

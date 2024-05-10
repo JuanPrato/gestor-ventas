@@ -1,10 +1,12 @@
-#include <iostream>
+#include "SalesManager.h"
 
-#include "Ventas.h"
+SalesManager::SalesManager() {
+   throw "Utility class";
+}
 
-const char* FILE_NAME = "ventas.ntp";
+const char* SalesManager::FILE_NAME = "ventas.ntp";
 
-SaleModel* getSale() {
+Sale* SalesManager::getSale() {
 
     FILE *p = fopen(FILE_NAME, "rb");
 
@@ -13,9 +15,9 @@ SaleModel* getSale() {
         return NULL;
     }
 
-    SaleModel sale;
+    Sale sale;
 
-    fread(&sale, sizeof(SaleModel), 1, p);
+    fread(&sale, sizeof(Sale), 1, p);
 
     fclose(p);
 
@@ -24,7 +26,7 @@ SaleModel* getSale() {
     return &sale;
 }
 
-void saveSale(SaleModel sale) {
+void SalesManager::saveSale(Sale sale) {
 
     FILE *p = fopen(FILE_NAME, "wb");
 
@@ -33,7 +35,7 @@ void saveSale(SaleModel sale) {
         return;
     }
 
-    fwrite(&sale, sizeof(SaleModel), 1, p);
+    fwrite(&sale, sizeof(Sale), 1, p);
 
     fclose(p);
 

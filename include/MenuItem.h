@@ -14,7 +14,7 @@ class MenuItem {
         string getTitleToShow();
         void setDecorator(string decorator);
         int getCode();
-        virtual void execute(User* user = NULL);
+        virtual int execute(User &user);
 
     protected:
 
