@@ -15,16 +15,16 @@ int main() {
 
     // MenuItem OPTIONS[] = {"Generar nueva venta", "Productos", "Clientes", "Ventas"};
 
-    AuthManager authManager;
+    AuthManager* authManager = new AuthManager();
 
-    User* user = authManager.askForLogin();
+    authManager->askForLogin();
 
     system("cls");
 
-    const string header = "Gestor de ventas: 0.0.1\nBienvenido " + user->getUsername() + ": Por favor elige una opcion para continuar\n=======================";
+    const string header = "Gestor de ventas: 0.0.1\nBienvenido " + authManager->getUser()->getUsername() + ": Por favor elige una opcion para continuar\n=======================";
 
-    Menu menu(10);
-    menu.setUser(user);
+    Menu menu(10, authManager);
+
     menu.setHeader(header);
 
     menu.addMenuItem(new Sales());

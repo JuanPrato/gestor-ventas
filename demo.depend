@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1715291818 source:e:\carpetas\c++\demo\main.cpp
+1715735648 source:e:\carpetas\c++\demo\main.cpp
 	<iostream>
 	<string.h>
 	<AuthManager.h>
@@ -9,20 +9,22 @@
 	<Sales.h>
 	<Exit.h>
 
-1715303209 e:\carpetas\c++\demo\include\menu.h
+1715735555 e:\carpetas\c++\demo\include\menu.h
 	<MenuItem.h>
 	<User.h>
+	<AuthManager.h>
 
-1715303435 source:e:\carpetas\c++\demo\src\menu.cpp
+1715736146 source:e:\carpetas\c++\demo\src\menu.cpp
 	"Menu.h"
 	<Exit.h>
 
-1715302894 e:\carpetas\c++\demo\include\menuitem.h
+1715736306 e:\carpetas\c++\demo\include\menuitem.h
 	<iostream>
 	<string.h>
+	<AuthManager.h>
 	<User.h>
 
-1715303218 source:e:\carpetas\c++\demo\src\menuitem.cpp
+1715735863 source:e:\carpetas\c++\demo\src\menuitem.cpp
 	"MenuItem.h"
 
 1714780044 source:e:\carpetas\c++\demo\src\exit.cpp
@@ -41,22 +43,24 @@
 	<string.h>
 	<User.h>
 
-1715303079 source:e:\carpetas\c++\demo\src\items\exit.cpp
+1715736638 source:e:\carpetas\c++\demo\src\items\exit.cpp
 	"Exit.h"
 	"MenuItem.h"
 
-1715302949 e:\carpetas\c++\demo\include\items\exit.h
+1715736627 e:\carpetas\c++\demo\include\items\exit.h
+	<AuthManager.h>
 	<MenuItem.h>
 
-1715303159 source:e:\carpetas\c++\demo\src\items\sales.cpp
+1715736653 source:e:\carpetas\c++\demo\src\items\sales.cpp
 	"Sales.h"
 	"Exit.h"
 
-1715302948 e:\carpetas\c++\demo\include\items\sales.h
-	"Menu.h"
-	"Sale.h"
-	"SalesManager.h"
-	"MenuItem.h"
+1715736587 e:\carpetas\c++\demo\include\items\sales.h
+	<Menu.h>
+	<AuthManager.h>
+	<Sale.h>
+	<SalesManager.h>
+	<MenuItem.h>
 
 1715292009 source:e:\carpetas\c++\demo\src\model\salemodel.cpp
 	"SaleModel.h"
@@ -78,30 +82,32 @@
 1715300812 e:\carpetas\c++\demo\include\model\user.h
 	<string>
 
-1715302944 e:\carpetas\c++\demo\include\items\loginitem.h
+1715736617 e:\carpetas\c++\demo\include\items\loginitem.h
+	<AuthManager.h>
 	<MenuItem.h>
 
-1715303123 source:e:\carpetas\c++\demo\src\items\loginitem.cpp
+1715601069 source:e:\carpetas\c++\demo\src\items\loginitem.cpp
 	"LoginItem.h"
 	"UsersManager.h"
 
-1715303120 source:e:\carpetas\c++\demo\src\items\registeritem.cpp
+1715736647 source:e:\carpetas\c++\demo\src\items\registeritem.cpp
 	"RegisterItem.h"
 	"UsersManager.h"
 
-1715302947 e:\carpetas\c++\demo\include\items\registeritem.h
+1715736600 e:\carpetas\c++\demo\include\items\registeritem.h
 	<string.h>
+	<AuthManager.h>
 	<User.h>
 	<MenuItem.h>
 
-1715302146 source:e:\carpetas\c++\demo\src\authmanager.cpp
+1715736772 source:e:\carpetas\c++\demo\src\authmanager.cpp
 	"AuthManager.h"
 	<Menu.h>
 	<LoginItem.h>
 	<RegisterItem.h>
 	<Exit.h>
 
-1715217273 e:\carpetas\c++\demo\include\authmanager.h
+1715736748 e:\carpetas\c++\demo\include\authmanager.h
 	<User.h>
 
 1715302038 source:e:\carpetas\c++\demo\src\files\usersmanager.cpp

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string.h>
 
+#include <AuthManager.h>
 #include <User.h>
 
 using namespace std;
@@ -14,7 +15,7 @@ class MenuItem {
         string getTitleToShow();
         void setDecorator(string decorator);
         int getCode();
-        virtual int execute(User &user);
+        virtual int execute(AuthManager &authManager);
 
     protected:
 

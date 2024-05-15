@@ -1,9 +1,10 @@
 #include "Menu.h"
 #include <Exit.h>
 
-Menu::Menu(int menuItemsQuantity) {
+Menu::Menu(int menuItemsQuantity, AuthManager *authManager) {
     _optionsQuantity = menuItemsQuantity;
     _options = new MenuItem*[menuItemsQuantity];
+    _authManager = authManager;
 }
 
 Menu::~Menu() {
@@ -11,14 +12,11 @@ Menu::~Menu() {
         delete _options[i];
     }
     delete _options;
+    delete _authManager;
 }
 
 void Menu::setHeader(string header) {
     this->_header = header;
-}
-
-void Menu::setUser(User* user) {
-    this->_user = user;
 }
 
 void Menu::printMenu() {
@@ -61,7 +59,7 @@ int Menu::executeOption(int option) {
             system("cls");
             printHeader();
             MenuItem* po = _options[i];
-            return po->execute(*_user);
+            return po->execute(*_authManager);
         }
     }
 }

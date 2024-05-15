@@ -9,7 +9,7 @@ RegisterItem::~RegisterItem() {
     //dtor
 }
 
-int RegisterItem::execute(User &user) {
+int RegisterItem::execute(AuthManager &authManager) {
     string username;
     string email;
     string password;

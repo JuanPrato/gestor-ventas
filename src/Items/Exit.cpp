@@ -4,7 +4,7 @@
 Exit::Exit(): MenuItem(0, "Salir") {
 }
 
-int Exit::execute(User &user) {
+int Exit::execute(AuthManager &authManager) {
     //cout << "Gracias por usar nuestro programa c:" << endl;
     return 1;
 }

@@ -6,28 +6,35 @@
 #include <RegisterItem.h>
 #include <Exit.h>
 
-AuthManager::AuthManager()
-{
-    //ctor
+AuthManager::AuthManager() {
+    _user = new User();
 }
 
-User* AuthManager::askForLogin() {
+AuthManager::~AuthManager() {
+    delete _user;
+}
+
+void AuthManager::askForLogin() {
     const string authHeader = "Gestor de ventas: 0.0.1\nPor favor ingrese para continuar\n=====================";
 
-    User* user = new User;
-
-    Menu menu(10);
-    menu.setUser(user);
+    Menu menu(10, this);
     menu.setHeader(authHeader);
 
     menu.addMenuItem(new LoginItem());
     menu.addMenuItem(new RegisterItem());
-    menu.addMenuItem(new Exit());
+    //menu.addMenuItem(new Exit());
 
-    while (string("").compare(user->getEmail()) == 0) {
+    while (string("").compare(this->_user->getEmail()) == 0) {
         system("cls");
         menu.createMenuLoop(true);
     }
 
-    return user;
+}
+
+User* AuthManager::getUser() {
+    return _user;
+}
+
+void AuthManager::updateUser(User *user) {
+    _user = user;
 }

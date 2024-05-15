@@ -18,7 +18,7 @@ int MenuItem::getCode() {
     return _code;
 }
 
-int MenuItem::execute(User &user) {
+int MenuItem::execute(AuthManager &authManager) {
     cout << "Not implemented";
     return 0;
 }

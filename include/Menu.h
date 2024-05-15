@@ -3,13 +3,14 @@
 
 #include <MenuItem.h>
 #include <User.h>
+#include <AuthManager.h>
 
 using namespace std;
 
 class Menu
 {
     public:
-        Menu(int menuItemsQuantity);
+        Menu(int menuItemsQuantity, AuthManager* authManager = new AuthManager());
         virtual ~Menu();
         void printMenu();
         int waitForOption();
@@ -17,7 +18,6 @@ class Menu
         void createMenuLoop(bool oneTime = false);
         void addMenuItem(MenuItem* menuItem);
         void setHeader(string header);
-        void setUser(User* user);
 
     protected:
 
@@ -26,7 +26,7 @@ class Menu
         int _optionsQuantity;
         int _currentOptions = 0;
         string _header;
-        User* _user;
+        AuthManager* _authManager;
         int executeOption(int option);
         void printHeader();
 };

@@ -1,16 +1,17 @@
 #ifndef SALES_H
 #define SALES_H
 
-#include "Menu.h"
-#include "Sale.h"
-#include "SalesManager.h"
-#include "MenuItem.h"
+#include <Menu.h>
+#include <AuthManager.h>
+#include <Sale.h>
+#include <SalesManager.h>
+#include <MenuItem.h>
 
 class Sales: public MenuItem {
     public:
         Sales();
         virtual ~Sales();
-        int execute(User &user);
+        int execute(AuthManager &authManager);
 
     protected:
 

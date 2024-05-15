@@ -10,7 +10,7 @@ Sales::~Sales()
     //dtor
 }
 
-int Sales::execute(User &user) {
+int Sales::execute(AuthManager &authManager) {
     SalesManager::saveSale(Sale());
 
     Menu menu(10);

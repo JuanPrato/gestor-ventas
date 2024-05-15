@@ -41,26 +41,32 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/AuthManager.h" />
-		<Unit filename="include/Files/Usuarios.h" />
-		<Unit filename="include/Files/Ventas.h" />
+		<Unit filename="include/Files/ClientsManager.h" />
+		<Unit filename="include/Files/DataManager.h" />
+		<Unit filename="include/Files/SalesManager.h" />
+		<Unit filename="include/Files/UsersManager.h" />
 		<Unit filename="include/Items/Exit.h" />
 		<Unit filename="include/Items/LoginItem.h" />
 		<Unit filename="include/Items/RegisterItem.h" />
 		<Unit filename="include/Items/Sales.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/MenuItem.h" />
+		<Unit filename="include/model/Sale.h" />
 		<Unit filename="include/model/SaleModel.h" />
 		<Unit filename="include/model/User.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AuthManager.cpp" />
-		<Unit filename="src/Files/Usuarios.cpp" />
-		<Unit filename="src/Files/Ventas.cpp" />
+		<Unit filename="src/Files/ClientsManager.cpp" />
+		<Unit filename="src/Files/DataManager.cpp" />
+		<Unit filename="src/Files/SalesManager.cpp" />
+		<Unit filename="src/Files/UsersManager.cpp" />
 		<Unit filename="src/Items/Exit.cpp" />
 		<Unit filename="src/Items/LoginItem.cpp" />
 		<Unit filename="src/Items/RegisterItem.cpp" />
 		<Unit filename="src/Items/Sales.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/MenuItem.cpp" />
+		<Unit filename="src/model/Sale.cpp" />
 		<Unit filename="src/model/SaleModel.cpp" />
 		<Unit filename="src/model/User.cpp" />
 		<Extensions>

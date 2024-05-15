@@ -11,23 +11,25 @@ LoginItem::~LoginItem() {
     //dtor
 }
 
-int LoginItem::execute(User &user) {
+int LoginItem::execute(AuthManager &authManager) {
 
     string email;
     string password;
 
+    fflush(stdin);
+
     cout << "Ingresar su email" << endl;
 
-    cin >> email;
+    getline(cin, email);
 
     cout << "Ingresar su password" << endl;
 
-    cin >> password;
+    getline(cin, password);
 
     User* u = UsersManager::login(email, password);
 
     if (string("").compare(u->getEmail()) != 0) {
-        user = *u;
+        authManager.updateUser(u);
     }
 
     return 0;
