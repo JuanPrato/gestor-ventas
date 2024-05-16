@@ -21,8 +21,6 @@ Sale* SalesManager::getSale() {
 
     fclose(p);
 
-    cout << sale.getProduct() << endl;
-
     return &sale;
 }
 

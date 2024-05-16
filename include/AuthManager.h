@@ -7,7 +7,7 @@ class AuthManager
 {
     public:
         AuthManager();
-        ~AuthManager();
+        virtual ~AuthManager();
         void askForLogin();
         User* getUser();
         void updateUser(User *user);

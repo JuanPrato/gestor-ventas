@@ -18,10 +18,11 @@ class User {
         string getEmail();
         string getPassword();
         string getUsername();
-        //void setEmail(string email);
-        //void setUsername(string username);
-        //void setPassword(string password);
-        //void setRole(int role);
+        int getRole();
+        void setEmail(string email);
+        void setUsername(string username);
+        void setPassword(string password);
+        void setRole(int role);
 
     protected:
 };

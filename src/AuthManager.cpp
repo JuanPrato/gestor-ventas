@@ -28,7 +28,6 @@ void AuthManager::askForLogin() {
         system("cls");
         menu.createMenuLoop(true);
     }
-
 }
 
 User* AuthManager::getUser() {

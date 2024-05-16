@@ -2,6 +2,7 @@
 #define SALE_H
 
 #include "string"
+#include <SaleItem.h>
 
 using namespace std;
 
@@ -9,12 +10,12 @@ class Sale
 {
     public:
         Sale();
-        string getProduct();
+        SaleItem* getProducts();
 
     protected:
 
     private:
-        string _product;
+        SaleItem _products[10];
         string _client;
         float _price;
 };

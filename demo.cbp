@@ -52,7 +52,7 @@
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/MenuItem.h" />
 		<Unit filename="include/model/Sale.h" />
-		<Unit filename="include/model/SaleModel.h" />
+		<Unit filename="include/model/SaleItem.h" />
 		<Unit filename="include/model/User.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AuthManager.cpp" />
@@ -67,7 +67,7 @@
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/MenuItem.cpp" />
 		<Unit filename="src/model/Sale.cpp" />
-		<Unit filename="src/model/SaleModel.cpp" />
+		<Unit filename="src/model/SaleItem.cpp" />
 		<Unit filename="src/model/User.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

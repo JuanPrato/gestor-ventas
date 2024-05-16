@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1715735648 source:e:\carpetas\c++\demo\main.cpp
+1715832149 source:e:\carpetas\c++\demo\main.cpp
 	<iostream>
 	<string.h>
 	<AuthManager.h>
@@ -14,7 +14,7 @@
 	<User.h>
 	<AuthManager.h>
 
-1715736146 source:e:\carpetas\c++\demo\src\menu.cpp
+1715832149 source:e:\carpetas\c++\demo\src\menu.cpp
 	"Menu.h"
 	<Exit.h>
 
@@ -75,18 +75,18 @@
 1714783420 e:\carpetas\c++\demo\include\files\ventas.h
 	<SaleModel.h>
 
-1715301541 source:e:\carpetas\c++\demo\src\model\user.cpp
+1715832342 source:e:\carpetas\c++\demo\src\model\user.cpp
 	"User.h"
 	<cstring>
 
-1715300812 e:\carpetas\c++\demo\include\model\user.h
+1715832176 e:\carpetas\c++\demo\include\model\user.h
 	<string>
 
 1715736617 e:\carpetas\c++\demo\include\items\loginitem.h
 	<AuthManager.h>
 	<MenuItem.h>
 
-1715601069 source:e:\carpetas\c++\demo\src\items\loginitem.cpp
+1715736789 source:e:\carpetas\c++\demo\src\items\loginitem.cpp
 	"LoginItem.h"
 	"UsersManager.h"
 
@@ -100,17 +100,17 @@
 	<User.h>
 	<MenuItem.h>
 
-1715736772 source:e:\carpetas\c++\demo\src\authmanager.cpp
+1715832296 source:e:\carpetas\c++\demo\src\authmanager.cpp
 	"AuthManager.h"
 	<Menu.h>
 	<LoginItem.h>
 	<RegisterItem.h>
 	<Exit.h>
 
-1715736748 e:\carpetas\c++\demo\include\authmanager.h
+1715832032 e:\carpetas\c++\demo\include\authmanager.h
 	<User.h>
 
-1715302038 source:e:\carpetas\c++\demo\src\files\usersmanager.cpp
+1715832383 source:e:\carpetas\c++\demo\src\files\usersmanager.cpp
 	<iostream>
 	"UsersManager.h"
 	"User.h"
@@ -120,11 +120,12 @@
 	"DataManager.h"
 	"User.h"
 
-1715291913 source:e:\carpetas\c++\demo\src\model\sale.cpp
+1715833022 source:e:\carpetas\c++\demo\src\model\sale.cpp
 	"Sale.h"
 
-1715292269 e:\carpetas\c++\demo\include\model\sale.h
+1715832998 e:\carpetas\c++\demo\include\model\sale.h
 	"string"
+	<SaleItem.h>
 
 1715293847 source:e:\carpetas\c++\demo\src\files\salesmanager.cpp
 	"SalesManager.h"
@@ -145,4 +146,10 @@
 
 1715293835 source:e:\carpetas\c++\demo\src\files\datamanager.cpp
 	"DataManager.h"
+
+1715832703 e:\carpetas\c++\demo\include\model\saleitem.h
+
+1715832878 source:e:\carpetas\c++\demo\src\model\saleitem.cpp
+	"SaleItem.h"
+	<cstring>
 

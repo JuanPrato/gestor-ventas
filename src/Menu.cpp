@@ -5,6 +5,7 @@ Menu::Menu(int menuItemsQuantity, AuthManager *authManager) {
     _optionsQuantity = menuItemsQuantity;
     _options = new MenuItem*[menuItemsQuantity];
     _authManager = authManager;
+    _header = string("");
 }
 
 Menu::~Menu() {
@@ -12,11 +13,10 @@ Menu::~Menu() {
         delete _options[i];
     }
     delete _options;
-    delete _authManager;
 }
 
 void Menu::setHeader(string header) {
-    this->_header = header;
+    _header = header;
 }
 
 void Menu::printMenu() {

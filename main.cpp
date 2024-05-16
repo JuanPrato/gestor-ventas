@@ -35,5 +35,7 @@ int main() {
 
     menu.createMenuLoop();
 
+    delete authManager;
+
     return 0;
 }

@@ -16,29 +16,33 @@ User::User(string username, string email, string password, int role) {
 }
 
 string User::getEmail() {
-    return string(_email);
+    return _email;
 }
 
 string User::getUsername() {
-    return string(_username);
+    return _username;
 }
 
 string User::getPassword() {
-    return string(_password);
+    return _password;
 }
-/*
+
+int User::getRole() {
+    return _role;
+}
+
 void User::setEmail(string email) {
-    _email.assign(email);
+    strcpy(_email, email.c_str());
 }
 
 void User::setUsername(string username) {
-    _username.assign(username);
+    strcpy(_username, username.c_str());
 }
 
 void User::setPassword(string password) {
-    _password.assign(password);
+    strcpy(_password, password.c_str());
 }
 void User::setRole(int role) {
     _role = role;
 }
-*/
+

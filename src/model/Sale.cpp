@@ -1,11 +1,11 @@
 #include "Sale.h"
 
 Sale::Sale() {
-    _product = "producto";
+    _products[0] = SaleItem();
     _client = "Juan";
     _price = 19.9f;
 }
 
-string Sale::getProduct() {
-    return _product;
+SaleItem* Sale::getProducts() {
+    return _products;
 }
